@@ -8,8 +8,8 @@
 
 LOGIN_TYPE_UID = "LOGIN_TYPE_UID"   # 使用用户和密码登录
 LOGIN_TYPE = LOGIN_TYPE_UID          # 设置登录方式
-USER_NAME = "17805930998"                   # 用户名
-PASSWD = "dai6523298"                      # 密码
+USER_NAME = "XXX"                   # 用户名
+PASSWD = "XXX"                      # 密码
 
 # 发送设置
 TIME_SLOG = 30 * 60                 # 发送微博的时间间隔 (秒)
