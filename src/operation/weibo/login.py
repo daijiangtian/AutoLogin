@@ -6,7 +6,7 @@ import base64
 import binascii
 import rsa
 import requests
-from src.operation.weibo.config import WBCLIENT, USER_AGENT, USER_NAME, PASSWD
+from src.operation.weibo.config import WBCLIENT, USER_AGENT
 from src.utils import get_logger
 
 logger = get_logger('weibo_login')
@@ -21,9 +21,7 @@ def encrypt_passwd(passwd, pubkey, servertime, nonce):
     return binascii.b2a_hex(passwd)
 
 
-def wblogin():
-    username = USER_NAME
-    password = PASSWD
+def wblogin(username,password):
     resp = session.get(
         'http://login.sina.com.cn/sso/prelogin.php?'
         'entry=weibo&callback=sinaSSOController.preloginCallBack&'
@@ -74,7 +72,7 @@ def wblogin():
 
 
 if __name__ == '__main__':
-    (http, uid) = wblogin()
+    (http, uid) = wblogin(username='XXX',password='XXX')
     print(uid)
     text = http.get('http://weibo.com/').text
     print(text)
