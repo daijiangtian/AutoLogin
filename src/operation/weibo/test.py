@@ -3,7 +3,7 @@
 # @Time    : 2018/10/7/007 19:40
 # @Author  : Woe
 # @Site    : 
-# @File    : test.py
+# @File    : login.py
 # @Software: PyCharm
 
 from src.operation.weibo.login import wblogin
